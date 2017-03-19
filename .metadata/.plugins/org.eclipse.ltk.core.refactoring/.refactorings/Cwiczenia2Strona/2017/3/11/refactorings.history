@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;SumMinMax.java&apos; to &apos;Cwiczenia2Strona/src/zadanie5&apos;&#x0D;&#x0A;- Original project: &apos;Cwiczenia2Strona&apos;&#x0D;&#x0A;- Destination element: &apos;Cwiczenia2Strona/src/zadanie5&apos;&#x0D;&#x0A;- Original element: &apos;SumMinMax.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;zadanie5" element1="/src&lt;{SumMinMax.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1489882656845" units="1" version="1.0"/>
+</session>

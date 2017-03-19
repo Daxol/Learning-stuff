@@ -1,0 +1,20 @@
+package zadanie8;
+
+import java.util.Scanner;
+
+public class ChristmassTree {
+
+	public static void main(String args[]){
+		System.out.print("podaj wysokość choinki: ");
+		Scanner in = new Scanner(System.in);
+		int height = in.nextInt();
+		
+		for (int i = 1; i <= height; i++) {
+			for (int j = 0; j <= i; j++) {System.out.print("*");
+//				if(height-i)System.out.print("*");
+//				else System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
+}

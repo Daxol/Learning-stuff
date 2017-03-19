@@ -1,0 +1,26 @@
+package zadanieB2;
+
+import java.util.Scanner;
+
+public class ZadanieB2 {
+	public static void main(String[] args) {
+		int countEven = 0;
+		int countOdd = 0;
+		int sumEven = 0;
+		int sumOdd = 0;
+		int number = 0;
+
+		Scanner in = new Scanner(System.in);
+		while (number != 333) {
+			number = in.nextInt();
+			if (number % 2 == 0) {
+				countEven++;
+			} else if(number % 2 !=0 && number % 5 ==0) {
+				countOdd++;
+				sumOdd+=number;
+			}
+		}
+		System.out.format("podano %d liczb parzystych natomiast, średnia arytmetyczna"
+				+ "  nieparzystych podzielnych przez 5 to %d",countEven,sumOdd/countOdd);
+	}
+}

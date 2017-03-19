@@ -1,0 +1,39 @@
+package com.daniel.udemyAnnotation;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
+import java.util.Random;
+
+public class FileFortuneService implements FortuneService {
+	static String[] fortuneArray;
+	public static void main(String[] args)throws IOException{
+		try{
+		LineNumberReader lineReader = new LineNumberReader(new FileReader("C:\\Users\\Daniel\\Desktop\\diff\\difffile1.txt"));
+		lineReader.readLine();
+		int index=0;
+		while(lineReader!=null){
+			lineReader.readLine();
+			index++;
+		}
+		fortuneArray = new String[index];
+	
+	lineReader.setLineNumber(0);
+	for (int i = 0; i < fortuneArray.length; i++) {
+		lineReader.readLine();
+		fortuneArray[i]=lineReader.readLine();
+	}}catch(Exception e){
+		e.printStackTrace();
+	}
+	}
+	private Random rand = new Random();
+	@Override
+	public String getFortune() {
+		try{
+		return fortuneArray[rand.nextInt(fortuneArray.length)];
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+		}
+
+}

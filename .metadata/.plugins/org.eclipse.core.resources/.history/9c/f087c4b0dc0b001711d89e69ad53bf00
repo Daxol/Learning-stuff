@@ -1,0 +1,30 @@
+package zadanie3;
+
+import java.util.Scanner;
+
+public class Raty {
+
+	public static void main(String[] args){
+		double prize;
+		int part;
+		System.out.println(getPrize());
+//		System.out.print("podaj ilość rat: ");
+//		part = in.nextInt();
+		
+		
+	}
+	public static double getPrize(){
+		double prize;
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Podaj cene towaru: ");
+		
+		prize = in.nextDouble();
+		if(prize< 100){
+			System.out.println("cena musi zaczynać się od 100zł, spróbuj ponownie");
+			prize = getPrize();
+		}
+		
+		return prize;
+	}
+}

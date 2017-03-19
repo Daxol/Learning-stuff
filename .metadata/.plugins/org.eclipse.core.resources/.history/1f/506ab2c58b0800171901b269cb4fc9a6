@@ -1,0 +1,28 @@
+package zadanieB1;
+
+import java.util.Scanner;
+
+public class Temperatura {
+	
+	public static void main(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		int celsjusz;
+		int faren;
+		
+		celsjusz = in.nextInt();
+		faren = celsjusz *(9/5) +32;
+		if(celsjusz<0){
+			System.out.format("%d F,zimno",faren);
+		}
+		else if(celsjusz<10&& celsjusz>=0){
+			System.out.format("%d F,chłodno",faren);
+		}
+		else if(celsjusz<25&& celsjusz>=10){
+			System.out.format("%d F,ciepło",faren);
+		}
+		else if( celsjusz>=25){
+			System.out.format("%d F,gorąco",faren);
+		}
+	}
+}

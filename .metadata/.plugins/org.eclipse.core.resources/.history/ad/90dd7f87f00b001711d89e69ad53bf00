@@ -1,0 +1,51 @@
+package zadanie4;
+
+import java.util.Scanner;
+
+public class Calc {
+	private static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("Kalkulator - możliwe obliczenia dodawanie(+), odejmowanie(-), mnożenie(*)"
+				+ ", dzielenie(/), reszta z dzielenia(mod)");
+		System.out.print("Podaj pierwszą liczbę: ");
+
+		try{
+			count(loadArg(), loadArg(), loadSymbol());
+		}catch(Exception e){
+			
+		}
+
+	}
+	public static void count(double arg1, double arg2, String symbol){
+		switch(symbol){
+		case"+": System.out.println(arg1 + arg2);
+		}
+		
+		
+	}
+	public static String loadSymbol() {
+		System.out.print("Podaj symbol arytmetyczny: ");
+		String arSymbol = in.next();
+		while (arSymbol.equals('+') || arSymbol != "-" || arSymbol != "*" || arSymbol != "/" || arSymbol != "mod") {
+			System.out.print("podano błędny symbol spróbuj ponownie: ");
+			arSymbol = in.nextLine();
+
+		}
+		return arSymbol;
+	}
+	public static double loadArg(){
+		double argValue;
+		System.out.print("podaj liczbę: ");
+		try{
+			argValue = in.nextDouble();
+		
+		}catch(Exception e){
+			System.err.println(e.getMessage());
+			System.out.println("podano błędną liczbę");
+			argValue = 0;
+		}
+		
+		return argValue;
+	}
+}

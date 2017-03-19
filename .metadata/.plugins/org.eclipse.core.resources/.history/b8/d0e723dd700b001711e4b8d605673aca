@@ -1,0 +1,39 @@
+package zadanie4;
+
+import java.util.Scanner;
+
+public class SumaCyfrLiczby {
+
+	public static void main(String[] args) {
+		int number;
+		Scanner in = new Scanner(System.in);
+		System.out.print("podaj liczbę: ");
+
+		number = in.nextInt();
+		System.out.println(modulo(number) + " suma cyfr liczby");
+
+	}
+
+	private static int modulo(int number) {
+		int sum = 0;
+		int evenNumberCounter = 0;
+		int evenNumberSum = 0;
+		int oddNumberCounter = 0;
+		int oddNumberSum = 0;
+		while (number != 0) {
+			if (number % 2 == 0) {
+				evenNumberCounter++;
+				evenNumberSum += number;
+			} else {
+				oddNumberCounter++;
+				oddNumberSum += number;
+			}
+			sum += number % 10;
+			number = number / 10;
+		}
+		System.out.println(
+				"suma cyfr: " + sum + "  liczba: " + number + " stosunek sredniej parzystych do nieparzystych: "
+						+ (evenNumberSum / (float) evenNumberCounter) / (oddNumberSum / (float) oddNumberCounter));
+		return sum;
+	}
+}

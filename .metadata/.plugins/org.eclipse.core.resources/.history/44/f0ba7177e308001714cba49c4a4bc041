@@ -1,0 +1,10 @@
+package com.daniel.udemydemo1;
+
+public class FootballCoach implements Coach {
+
+	@Override
+	public String getDailyWorkout() {
+		return "make 50 pump up";
+	}
+
+}

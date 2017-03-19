@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class SumMinMax {
+
+	public static void main(String[] args){
+		
+		int valueMax;
+		int valueMin;
+		Scanner in = new Scanner(System.in);
+		System.out.println("podaj liczbę");
+		
+		whil
+	}
+}
