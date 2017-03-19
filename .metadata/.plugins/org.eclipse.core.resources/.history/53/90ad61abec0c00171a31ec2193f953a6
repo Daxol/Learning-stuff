@@ -1,0 +1,33 @@
+package zadanie4;
+
+import java.util.Scanner;
+
+public class ZmBinaryConvert {
+
+	public static void main(String[] args) {
+
+		int[] binnaryArray = new int[32];
+		System.out.println("podaj liczbę ");
+		Scanner in = new Scanner(System.in);
+		int binValue = in.nextInt();
+
+		String binaryCodeString = "";
+		if (binValue < 0) {
+			binaryCodeString += "1.";
+		}
+
+		for (int i = 0; i < binnaryArray.length; i++) {
+			if (binValue > 0) {
+				if (binValue % 2 != 0) {
+					binnaryArray[i] = 1;
+				}
+
+				binValue /= 2;
+			}
+		}
+		System.out.print(binaryCodeString);
+		for(int var:binnaryArray){
+			System.out.print(var);
+		}
+	}
+}
