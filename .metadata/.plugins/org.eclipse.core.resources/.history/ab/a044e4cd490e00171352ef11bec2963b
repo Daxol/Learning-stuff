@@ -1,0 +1,19 @@
+package zadanie8;
+
+import java.util.Scanner;
+
+public class WordCountTask {
+
+	public static void main(String[] args){
+		System.out.println("podaj ciąg znaków: ");
+		Scanner in = new Scanner(System.in);
+		String userString = in.nextLine();
+		
+		System.out.println(wordCount(userString));
+	}
+	public static int wordCount(String userString){
+		int counter =0;
+		String[] arrayWords = userString.split("\\%s+");
+		return arrayWords.length;
+	}
+}

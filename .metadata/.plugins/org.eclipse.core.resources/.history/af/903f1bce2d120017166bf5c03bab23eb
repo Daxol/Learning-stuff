@@ -1,0 +1,31 @@
+package kursy;
+
+public class Waluta {
+	String nazwaWaluty;
+	int przelicznik;
+	String kodWaluty;
+	float kursSredni;
+	
+	public Waluta(String nazwaWaluty,String przelicznik, String kodWaluty,String kursSredni){
+		this.nazwaWaluty = nazwaWaluty;
+		this.przelicznik = Integer.parseInt(przelicznik);
+		this.kodWaluty = kodWaluty;
+		this.kursSredni = Float.parseFloat(kursSredni);
+	}
+
+	public String getNazwaWaluty() {
+		return nazwaWaluty;
+	}
+
+	public int getPrzelicznik() {
+		return przelicznik;
+	}
+
+	public String getKodWaluty() {
+		return kodWaluty;
+	}
+
+	public float getKursSredni() {
+		return kursSredni;
+	}
+}

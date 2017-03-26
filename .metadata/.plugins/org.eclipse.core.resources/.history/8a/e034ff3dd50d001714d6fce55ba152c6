@@ -1,0 +1,15 @@
+package zadanie3;
+
+import java.util.Scanner;
+
+public class Palindrom {
+
+	public static void main(String[] args){
+		System.out.println("podaj zdanie by sprawdzić czy jest palindromem: ");
+		Scanner in = new Scanner(System.in);
+		String palindrom = in.nextLine();
+		
+		String isPalindrom = palindrom.replaceAll("//s+","");
+		System.out.println(isPalindrom);
+	}
+}

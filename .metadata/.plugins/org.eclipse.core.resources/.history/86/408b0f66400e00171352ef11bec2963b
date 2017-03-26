@@ -1,0 +1,17 @@
+package zadanie6;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class ConvertToInt {
+
+	public static void main(String[] args) {
+		System.out.println("podaj liczbę: ");
+//		Scanner in = new Scanner(System.in);
+//		String stringNumber = in.next();
+		NumberFormat f = NumberFormat.getInstance();
+		f.setGroupingUsed(false);
+		System.out.println(f.format(Double.parseDouble("-12E+5 dd")));
+	}
+
+}

@@ -1,0 +1,16 @@
+package zadanie1;
+
+public class CountLast {
+
+	public static void main(String[] args){
+		String a = "Abrakadabra";
+		char last= a.charAt(a.length()-1);
+		int counter = 0;
+		for (int i = 0; i < a.length()-1; i++) {
+			if(a.charAt(i)==last){
+				counter++;
+			}
+		}
+		System.out.println(counter);
+	}
+}

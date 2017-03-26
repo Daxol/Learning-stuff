@@ -1,0 +1,19 @@
+package zadanie7;
+
+import java.util.Scanner;
+
+public class StrFind {
+
+	public static void main(String[] args){
+		System.out.println("podaj łańcuch znaków: ");
+		Scanner in = new Scanner(System.in);
+		String userString = in.nextLine();
+		System.out.println("podaj poszukiwany ciąg: ");
+		String userWantedString = in.nextLine();
+		
+		strFind(userString,userWantedString);
+	}
+	public static void strFind(String userString, String userWantedString ){
+		System.out.println(userString.indexOf(userWantedString));
+	}
+}

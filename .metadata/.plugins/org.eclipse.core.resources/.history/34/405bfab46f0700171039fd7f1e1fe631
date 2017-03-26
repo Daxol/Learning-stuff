@@ -1,8 +1,0 @@
-package com.daniel.udemydemo1;
-
-public class BaseballCoach implements  {
-	
-	public String getDailyWorkout(){
-		return "Spend 30 minutes running";
-	}
-}

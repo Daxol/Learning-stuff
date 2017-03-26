@@ -1,0 +1,46 @@
+package zadanie9;
+
+import java.util.Scanner;
+
+public class Macierz {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Podaj rozmiar macierzy: ");
+		int size = in.nextInt();
+		boolean[][] arrayBool = new boolean[size][size];
+		in.close();
+		for (int i = 0; i < arrayBool.length; i++) {
+			for (int j = 0; j < arrayBool.length; j++) {
+				if (cos(i +1, j+1 )) {
+					System.out.printf("%4c", '.');
+				} else {
+					System.out.printf("%4c", '+');
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static boolean cos(int number, int number2) {
+		if(number == number2){
+			return false;
+		}
+		boolean stop = true;
+		while (stop) {
+			if (number == number2){
+				return true;}
+			else if (number > number2) {
+				number -= number2;
+			}
+			else if (number < number2) {
+				number2 -= number;
+			}
+			 if(number <=1 || number2 <=1){
+				stop=false;
+				
+			}
+		}
+		return false;
+	}
+}

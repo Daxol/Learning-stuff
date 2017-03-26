@@ -9,16 +9,16 @@ public class ZmBinaryConvert {
 		int[] binnaryArray = new int[32];
 		System.out.println("podaj liczbę ");
 		Scanner in = new Scanner(System.in);
-		
+
 		try {
-		int binValue = in.nextInt();
-		
-		int counter = 0;
-		String binaryCodeString = "";
-		if (binValue < 0) {
-			binaryCodeString += "1.";
-			binValue *= (-1);
-		}
+			int binValue = in.nextInt();
+
+			int counter = 0;
+			String binaryCodeString = "";
+			if (binValue < 0) {
+				binaryCodeString += "1.";
+				binValue *= (-1);
+			}
 			for (int i = binnaryArray.length - 1; i >= 0; i--) {
 				if (binValue > 0) {
 					if (binValue % 2 != 0) {
@@ -34,7 +34,9 @@ public class ZmBinaryConvert {
 			for (int i = binnaryArray.length - counter; i < binnaryArray.length; i++) {
 				System.out.print(binnaryArray[i]);
 			}
+			in.close();
 		} catch (Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+		}
 	}
 }

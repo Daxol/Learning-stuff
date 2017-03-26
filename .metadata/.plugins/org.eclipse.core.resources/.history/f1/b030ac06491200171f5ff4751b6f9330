@@ -1,0 +1,59 @@
+package kursy;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class Kurs {
+
+	public static void main(String[] args) throws MalformedURLException{
+		waluty("http://rss.nbp.pl/kursy/xml2/2010/a/10a091.xml");
+	}
+//	List<Waluta>
+	public static void waluty(String adres) throws MalformedURLException{
+		
+		try {
+			URL urlAdres = new URL(adres);
+			URLConnection connection = urlAdres.openConnection();
+			
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = factory.newDocumentBuilder();
+			
+			List<Waluta> currency = new ArrayList<Waluta>();
+			
+			Document doc = docBuilder.parse(connection.getInputStream());
+			
+			NodeList position = doc.getElementsByTagName("pozycja");
+			
+			for (int i = 0; i < position.getLength(); i++) {
+				Node positionNode = position.item(i);
+				if(positionNode.getNodeType()==Node.ELEMENT_NODE){
+					Element elementOfPosition = (Element)positionNode;
+				System.out.println(	elementOfPosition.getElementsByTagName("przelicznik").item(1));
+				}
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

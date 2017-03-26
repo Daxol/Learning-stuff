@@ -1,0 +1,36 @@
+package zadanie1;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ZnakiSlowaPlik {
+
+	public static void main(String[] args) throws IOException {
+		String file = "C:\\Users\\Daniel\\Desktop\\diff\\file1.txt";
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+		String currentLine;
+		String wholeText = "";
+		while ((currentLine = reader.readLine()) != null) {
+			wholeText += "\n"+ currentLine;
+		}
+		try {
+			if (reader != null) {
+				reader.close();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		System.out.println(liczZnaki(wholeText));
+	}
+	public static int liczZnaki(String fileString){
+		String temp = fileString;
+		String trim = fileString.trim();
+	    if (trim.isEmpty())
+	        return 0;
+	    return trim.split("\\s+").length;
+	}
+}

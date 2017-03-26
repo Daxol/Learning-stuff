@@ -1,0 +1,20 @@
+package zadanie1;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ZnakiSlowaPlik {
+
+	public static void main(String[] args) throws IOException{
+		String file = "C:\\Users\\Daniel\\Desktop\\diff\\file1.txt";
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+		String currentLine;
+		String wholeText="";
+		while((currentLine = reader.readLine()) !=null){
+			wholeText+=currentLine;
+			System.out.println(currentLine);
+		}
+	}
+}

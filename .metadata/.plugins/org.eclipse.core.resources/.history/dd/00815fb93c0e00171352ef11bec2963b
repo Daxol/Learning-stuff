@@ -1,0 +1,11 @@
+package zadanie6;
+
+public class ConvertToInt {
+
+	public static void main(String[] args) {
+		
+		System.out.println(Long.valueOf(Long.parseLong("-12E5")));
+
+	}
+
+}

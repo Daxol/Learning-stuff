@@ -1,6 +1,0 @@
-package com.daniel.udemyAnnotation;
-
-public interface Coach {
-
-	public String getDailyWorkout();
-}

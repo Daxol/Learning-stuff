@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Cwiczenia6Strona/src/zadanie2/FindAndWrite.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="zadanie2.FindAndWrite"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Cwiczenia6Strona"/>
+</launchConfiguration>

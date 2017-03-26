@@ -1,8 +1,0 @@
-package zadanie3;
-
-public class Raty {
-
-	public static void main(String[] args){
-		
-	}
-}

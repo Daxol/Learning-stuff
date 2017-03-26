@@ -1,0 +1,19 @@
+package zadanie2;
+
+import java.util.Scanner;
+
+public class ReverseWords {
+
+	public static void main(String[] args) {
+		System.out.println("podaj ciąg znaków: ");
+		Scanner in = new Scanner(System.in);
+		String words = in.nextLine();
+		
+		String reverse ="" ;
+		
+		for (int i = words.length(); i>0; i--) {
+			reverse+=words.charAt(i);
+		}
+		System.out.println(reverse);
+	}
+}

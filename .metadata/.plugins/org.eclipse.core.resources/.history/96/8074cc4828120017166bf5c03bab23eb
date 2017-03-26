@@ -1,0 +1,49 @@
+package kursy;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class Kurs {
+
+	public static void main(String[] args) throws ParserConfigurationException{
+		kursy();
+	}
+	public static void kursy() throws ParserConfigurationException, TransformerException{
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder =factory.newDocumentBuilder();
+		try {
+			URL url = new URL("http://rss.nbp.pl/kursy/xml2/2010/a/10a092.xml");
+			URLConnection conn = url.openConnection();
+		Document doc= builder.parse(conn.getInputStream());
+		TransformerFactory factory1 = TransformerFactory.newInstance();
+		Transformer xform = factory1.newTransformer();
+
+		// that’s the default xform; use a stylesheet to get a real one
+		xform.transform(new DOMSource(doc), new StreamResult(System.out));
+		NodeList nazwy =doc.getElementsByTagName("nazwa_waluty");
+		System.out.println(nazwy.item(4));
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

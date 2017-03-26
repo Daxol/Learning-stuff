@@ -1,0 +1,10 @@
+package zadanie1;
+
+public class CountLast {
+
+	public static void main(String[] args){
+		String a = "Abrakadabra";
+		
+		System.out.println(a.length());
+	}
+}

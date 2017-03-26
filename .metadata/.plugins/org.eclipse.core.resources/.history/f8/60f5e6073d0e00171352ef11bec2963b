@@ -1,0 +1,15 @@
+package zadanie6;
+
+import java.text.NumberFormat;
+
+public class ConvertToInt {
+
+	public static void main(String[] args) {
+		
+		System.out.println(Double.parseDouble("-12E+5"));
+		NumberFormat f = NumberFormat.getInstance();
+		f.setGroupingUsed(false);
+		System.out.println(f.format(Double.parseDouble("-12E5")));
+	}
+
+}
