@@ -1,0 +1,33 @@
+package zad2Dom;
+
+public class FindAndCount {
+
+	public static void main(String[] args) {
+		String[][] tab = { { "dom", "a", "c" }, { "domdom", "do dom", "af" } };
+		System.out.println(findWord(tab, "dom", 3));
+	}
+
+	private static int findWord(String[][] tab, String word, int number) {
+		int counter = 0;
+		int longOfWords = 0;
+		String conca = "";
+		for (int i = 0; i < tab.length; i++) {
+			for (int j = 0; j < tab[i].length; j++) {
+				System.err.println(counter);
+				longOfWords += tab[i][j].length();
+				counter += tab[i][j].split(word, -1).length - 1;
+				if ((j % 2 == 0) && (i % 2 == 0)) {
+					System.out.println(" i: "+i +" j: "+j);
+					if (tab[i][j].length() < 3) {
+						conca += tab[i][j];
+					} else
+						conca += tab[i][j].substring(0, 2);
+				}
+			}
+		}
+		System.out.println("srednia dlugosc" + longOfWords / (tab.length * tab[0].length));
+		System.out.println(conca);
+
+		return counter;
+	}
+}
