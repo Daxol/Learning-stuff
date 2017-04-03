@@ -1,0 +1,17 @@
+package zad1Dom;
+
+import java.util.Random;
+
+public class RandomArray {
+
+	public static void main(String[] args){
+		
+		Random rand = new Random();
+	
+		int size;
+		while((size =(rand.nextInt(100-50+1)+50))%4!=0){
+			System.out.println("a");
+		}
+//		int[][] randomArray = new int[]
+	}
+}

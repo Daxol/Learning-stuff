@@ -1,0 +1,33 @@
+package zad4;
+
+public class Zad {
+
+	public static void main() {
+		firstlast("AlamaKo ta", 'a');
+	}
+
+	public static void firstlast(String s, char c) {
+		int countChar = 0;
+		String temp = "";
+		for (int i = 0; i < s.length() - 1; i++) {
+			if (s.charAt(i) == c) {
+				if(temp!=""){
+					System.out.println(countChar + " to ilosc znakow a to tekst: "+temp);
+					temp="";
+					countChar=0;
+				}
+			}
+			if (temp != "") {
+				countChar++;
+				temp += s.charAt(i);
+			
+			}
+			if(i ==s.length()-1 && temp!=""){
+				System.out.println(-1 + " to ilosc znakow a to tekst: "+temp);
+
+			}
+			
+			
+		}
+	}
+}

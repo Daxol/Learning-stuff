@@ -13,6 +13,7 @@ public class JavaConfigDemoApp {
 		SwimCoach myCoach = context.getBean("swimCoach", SwimCoach.class);
 
 		// call a method on the bean
+		System.out.println(myCoach.getDailyWorkout());
 		System.out.println(myCoach.getDailyFortune());
 		System.out.println(myCoach.getEmail() + " " + myCoach.getTeam());
 		

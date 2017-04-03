@@ -1,9 +1,0 @@
-package zadanie4;
-
-public class ZmBinaryConvert {
-
-	public static void main(String[] args){
-		
-		
-	}
-}

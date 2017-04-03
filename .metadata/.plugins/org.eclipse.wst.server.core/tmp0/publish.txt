@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Mar 26 23:53:40 CEST 2017
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse\ projekty\\w\u0142asne\\exercise\ 1\\Daniel\\WebContent\\WEB-INF\\lib\\spring-web-4.3.7.RELEASE.jar=WEB-INF/lib/spring-web-4.3.7.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Eclipse\ projekty\\w\u0142asne\\exercise\ 1\\Daniel\\WebContent\\WEB-INF\\lib\\spring-web-4.3.7.RELEASE-sources.jar=WEB-INF/lib/spring-web-4.3.7.RELEASE-sources.jar
