@@ -1,0 +1,21 @@
+package com.luv2code.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringHelloApp {
+
+	public static void main(String[] args) {
+
+		try{ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Coach theCoach = context.getBean("MyCoach", Coach.class);
+		
+		System.out.println(theCoach.getDailyWorkout());
+		
+		context.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}
