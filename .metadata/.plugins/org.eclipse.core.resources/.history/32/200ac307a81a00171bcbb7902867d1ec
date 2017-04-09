@@ -1,0 +1,24 @@
+package patryk;
+
+public class StringSecondToUpper {
+
+	public static void main(String[] args) {
+		System.out.println(toUpperSecond("daniel"));
+
+	}
+	
+	private static String toUpperSecond(String str){
+		
+		String returnStr="";
+		
+		for (int i = 0; i < str.length(); i+=2) {
+		try{	returnStr+=str.charAt(i-1);
+			returnStr+=str.charAt(i)+32;
+		}catch(Exception e){
+			return returnStr;}
+		}
+		return returnStr;
+		
+	}
+
+}

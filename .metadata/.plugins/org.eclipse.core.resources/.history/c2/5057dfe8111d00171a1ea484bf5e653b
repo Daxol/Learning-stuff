@@ -1,0 +1,33 @@
+package strona1.zad7;
+import java.util.Scanner;
+
+public class Cross {
+	public static void main(String[] args){
+		System.out.println("podaj dlugosc boku");{
+			Scanner in = new Scanner(System.in);
+			int size = in.nextInt();
+			
+			for (int i = 0; i < size; i++) {
+				for (int j = 0; j < size; j++) {
+					if(j==0||j==size-1){
+						System.out.print("*");
+					}
+					else if(i==0||i==size-1){
+						System.out.print("*");
+					}
+					else if(size/2==j){
+						System.out.print("*");
+						if(size%2==0){
+						System.out.print("*");
+					j++;
+						}}
+					else{
+						System.out.print(" ");
+					}
+				}
+				System.out.println();
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,34 @@
+package zadanie3;
+
+public class EncryptionClass {
+
+	public static void main(String[] args) {
+		System.out.println(encrypt("Ka2wa", "abc"));
+	}
+
+	private static String encrypt(String str, String keyCode) {
+		String returnStr = "";
+		int temp;
+		int keyCounter = 0;
+		int changeKey;
+		for (int i = 0; i < str.length(); i++) {
+			temp = str.charAt(i);
+
+			if ((temp > 64 && temp < 91) || (temp > 96 && temp < 123)) {
+				changeKey = keyCode.charAt(keyCounter) % 26;
+				temp += changeKey;
+				keyCounter++;
+
+				if (keyCounter >= keyCode.length()) {
+					keyCounter = 0;
+				}
+				if (!((temp > 64 && temp < 91) || (temp > 96 && temp < 123))) {
+					temp -= 26;
+				}
+			}
+			returnStr += (char) temp;
+		}
+		return returnStr;
+
+	}
+}

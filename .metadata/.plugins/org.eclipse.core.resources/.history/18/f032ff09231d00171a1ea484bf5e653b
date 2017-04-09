@@ -1,0 +1,14 @@
+package strona3.zad6;
+
+public class MyClass {
+
+	public static void main(String[] args){
+		String[] myArray = {"Daniel","Weronika","Kacper","Bartek","Oliwia",};
+		
+		for (String string : myArray) {
+			if(string.lastIndexOf(string)=='a'||string.contains("b")){
+				System.out.println(string);
+			}
+		}
+	}
+}

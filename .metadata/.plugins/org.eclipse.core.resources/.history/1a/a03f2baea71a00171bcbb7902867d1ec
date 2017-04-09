@@ -1,0 +1,10 @@
+package patryk;
+
+public class StringSecondToUpper {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

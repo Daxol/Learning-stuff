@@ -1,0 +1,31 @@
+package zadanie3;
+
+public class EncryptionClass {
+
+	public static void main(String[] args) {
+System.out.println(encrypt("Daniel","abc"));
+	}
+
+	private static String encrypt(String str, String keyCode) {
+		String returnStr = "";
+		char temp;
+		int keyCounter = 0;
+		for (int i = 0; i < str.length(); i++) {
+			temp = (char) (str.charAt(i));
+			if (Character.isAlphabetic(str.charAt(i))) {
+				temp += (char) keyCode.charAt(keyCounter);
+				keyCounter++;
+
+				if (keyCounter >= keyCode.length()) {
+					keyCounter = 0;
+				}
+				if (!Character.isAlphabetic(temp)) {
+					temp -= 26;
+				}
+			}
+			returnStr += temp;
+		}
+		return returnStr;
+
+	}
+}

@@ -1,0 +1,22 @@
+package com.luv2code.springdemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SwimCoach implements Coach{
+
+	private FortuneService fortuneService;
+	
+	@Override
+	public String getDailyWorkput() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

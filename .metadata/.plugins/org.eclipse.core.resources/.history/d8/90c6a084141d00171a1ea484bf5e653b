@@ -1,0 +1,15 @@
+package strona1.zad8;
+import java.util.Random;
+public class RandomValueArray {
+
+	public static void main(String[] args){
+		int[] myArray = new int[10];
+		Random rand = new Random();
+		for (int i = 0; i < myArray.length; i++) {
+			myArray[i]=rand.nextInt(10-5+1)+5;
+		}
+		for (int i : myArray) {
+			System.out.print(" "+i);
+		}
+	}
+}

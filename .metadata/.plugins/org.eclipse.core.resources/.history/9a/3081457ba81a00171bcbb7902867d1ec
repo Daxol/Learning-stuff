@@ -1,0 +1,29 @@
+package patryk;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomValue {
+
+	public static void main(String[] args){
+		
+		Random rand = new Random();
+		int randomCounter;
+		System.out.println("podaj dlugosc K: ");
+		Scanner in = new Scanner(System.in);
+		int k = in.nextInt();
+		char[] charArray = new char[k];
+		for (int i = 0; i < args.length; i++) {
+			randomCounter=rand.nextInt(101);
+			if(randomCounter<=15){
+				charArray[i]='x';
+			}
+			else{
+				charArray[i]='z';
+			}
+		}
+		for (char c : charArray) {
+			System.out.print(c+" ");
+		}
+	}
+}
