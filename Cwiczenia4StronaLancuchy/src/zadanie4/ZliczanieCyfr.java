@@ -11,11 +11,14 @@ public class ZliczanieCyfr {
 		Scanner in = new Scanner(System.in);
 		userString = in.nextLine();
 		in.close();
+//		userString = " Ola 23 ma 1cos";
 		int sum=0;
-		char a = 3;
+		
 		
 		for (int i = 0; i < userString.length(); i++) {
-			if(userString.charAt(i)>48 && userString.charAt(i)<58){
+//			if(userString.charAt(i)>48 && userString.charAt(i)<58){
+			if(userString.charAt(i)>='0' && userString.charAt(i)<='9'){
+
 				sum+=(userString.charAt(i)-'0'); 
 			}
 		}

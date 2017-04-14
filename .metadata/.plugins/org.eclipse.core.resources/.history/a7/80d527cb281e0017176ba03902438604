@@ -1,0 +1,11 @@
+package pack2.test;
+
+public class Reg {
+	public static void main(String[] args){
+		String str = "dax,. /dax.,    , .f";
+		String[] nowy = str.split("/s,.");
+		for (String string : nowy) {
+			System.out.println(string);
+		}
+	}
+}

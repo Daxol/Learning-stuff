@@ -1,0 +1,28 @@
+package zadanie3;
+
+import java.util.Scanner;
+
+public class AsciCount {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("podaj łańcuch znaków");
+		try {
+			String userStr = in.nextLine();
+			int asciCounter = 0;
+			for (int i = 0; i < userStr.length(); i++) {
+				if (userStr.charAt(i) >= 'a' && userStr.charAt(i) <= 'z') {
+					asciCounter += userStr.charAt(i);
+				}
+			}
+			System.out.printf("suma kodów ASCII podanego ciągu wynosi  %d",asciCounter);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		in.close();
+
+	}
+
+}

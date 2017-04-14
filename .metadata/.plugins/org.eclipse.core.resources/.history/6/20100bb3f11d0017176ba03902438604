@@ -1,0 +1,55 @@
+package pack2.zadanie1;
+
+import java.util.Random;
+
+public class RandomMinMax {
+
+	public static void main(String[] args) {
+
+		Random rand = new Random();
+		int temp;
+
+		int sumOdd = 0;
+		int counterOdd = 0;
+
+		int sumEven = 0;
+		int counterEven = 0;
+
+		int maxOne = -1;
+		int maxTwo = -1;
+		int maxThree = -1;
+
+		for (int i = 0; i < 100; i++) {
+			temp = rand.nextInt(201) - 100;
+			if (temp % 2 == 0) {
+				sumEven += temp;
+				counterEven++;
+			} else {
+				sumOdd += temp;
+				counterOdd++;
+			}
+			if (temp > 0 && temp > maxThree) {
+				if (temp > maxTwo) {
+					if (temp > maxOne) {
+						maxThree = maxTwo;
+						maxTwo = maxOne;
+						maxOne = temp;
+					} else {
+						maxThree = maxTwo;
+						maxTwo = temp;
+					}
+				} else {
+					maxThree = temp;
+				}
+			}
+
+		}
+		if(maxOne==-1){
+			System.out.println("nie wylosowany tyle liczb dodatnich ");
+		}else{
+		System.out.printf("1.max %d  2.max %d  3.max %d",maxOne,maxTwo,maxThree);
+		
+	}float average = (float)(sumEven/counterEven)/(sumOdd/counterOdd);
+		System.out.printf(" stosunek parzystych do nieparzystych %.3f",average);
+		}
+}

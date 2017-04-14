@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;pack2.zadanie2.MyArray.java&apos; to &apos;Exercise.java&apos;&#x0D;&#x0A;- Original project: &apos;CwiczeniaK&apos;&#x0D;&#x0A;- Original element: &apos;pack2.zadanie2.MyArray.java&apos;&#x0D;&#x0A;- Renamed element: &apos;pack2.zadanie2.Exercise.java&apos;" description="Rename compilation unit &apos;MyArray.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;pack2.zadanie2{MyArray.java" name="Exercise.java" references="false" stamp="1491831223844" version="1.0"/>
+</session>

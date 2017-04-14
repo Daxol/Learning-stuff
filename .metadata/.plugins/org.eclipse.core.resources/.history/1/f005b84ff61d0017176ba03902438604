@@ -1,0 +1,28 @@
+package pack2.zadanie3;
+
+public class Encrypt {
+	public static void main(String[] args) {
+		System.out.println(doEncrypt("ala1", "Ala ma 2 koty"));
+	}
+
+	private static String doEncrypt(String keyCode, String userString) {
+
+		int keyCounter = 0;
+		String newString = "";
+		int tempCode;
+		char tempChar;
+		for (int i = 0; i < userString.length(); i++) {
+			tempChar = userString.charAt(i);
+			if ((tempChar > 64 && tempChar < 91) || (tempChar > 97 && tempChar < 123)) {
+				tempChar = (char) (tempChar + (keyCode.charAt(keyCounter) % 26));
+				keyCounter = (keyCounter == keyCode.length()) ? keyCounter = 0 : keyCounter++;
+			}
+			if (!((tempChar > 64 && tempChar < 91) || (tempChar > 97 && tempChar < 123))) {
+				tempChar -= 26;
+			}
+			newString += tempChar;
+
+		}
+		return newString;
+	}
+}

@@ -1,0 +1,29 @@
+package pack2.zadanie4;
+
+import java.util.Scanner;
+public class MyClass {
+
+	public static void main(String[] args){
+		System.out.println("podaj fraze");
+		Scanner in = new Scanner(System.in);
+		String userString = in.nextLine();
+		
+		String[] myArray = new String[userString.length()];
+		System.out.printf("podaj zdanie %d razy \n",userString.length());
+		int counterCells=0;
+		int sumStrings=0;
+		for (int i = 0; i < myArray.length; i++) {
+			myArray[i]=in.nextLine();
+			sumStrings += myArray[i].length();
+			if(myArray[i].split(" ",-1)[0]==userString){
+				counterCells++;
+			}
+		}
+		
+		System.out.printf("%d komórek zaczyna się od %s natomiast średnia podanych ciągów "
+				+ "wynosi %.2f",counterCells,userString,(float)sumStrings/userString.length());
+		
+		
+		in.close();
+	}
+}

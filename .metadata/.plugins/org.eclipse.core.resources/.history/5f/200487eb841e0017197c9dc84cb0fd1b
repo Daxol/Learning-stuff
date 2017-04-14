@@ -1,0 +1,34 @@
+package zad3;
+
+public class MyClass {
+
+	public static void main(String[] args) {
+		System.out.println(encrypt("ala1", "Ala ma 2 koty"));
+	}
+
+	public static String encrypt(String keyCode, String userString) {
+
+		int keyCounter = 0;
+
+		String encryptedString = "";
+		char temp;
+		for (int i = 0; i < userString.length(); i++) {
+			temp = userString.charAt(i);
+			if ((temp >= 'a' && temp <= 'z') || (temp >= 'A' && temp <= 'Z')) {
+
+				temp += keyCode.charAt(keyCounter) % 26;
+
+				keyCounter = keyCounter >= (keyCode.length() - 1) ? 0 : keyCounter + 1;
+				System.out.println(keyCounter);
+				if (!((temp >= 'a' && temp <= 'z') || (temp >= 'A' && temp <= 'Z'))) {
+					temp -= 26;
+				}
+			}
+			encryptedString += temp;
+
+		}
+		return encryptedString;
+
+	}
+
+}
